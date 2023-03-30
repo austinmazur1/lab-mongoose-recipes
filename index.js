@@ -31,7 +31,11 @@ mongoose
 })
 
 .then(() => {
+  Recipe.deleteOne({title: "Carrot Cake"})
+  .then(console.log('succesful deletion!'))
+  
 })
+// return mongoose.connection.close();
   .catch(error => {
     console.error('Error connecting to the database', error);
   });
